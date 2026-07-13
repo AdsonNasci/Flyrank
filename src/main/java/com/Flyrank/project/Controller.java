@@ -1,5 +1,5 @@
-import com.Flyrank.project.Unsettled;
-import com.Flyrank.project.UnsettledRepository;
+package com.Flyrank.project;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,10 +12,19 @@ import java.util.List;
 public class Controller{
     @Autowired
     private UnsettledRepository repository;
+
     @GetMapping("/listar")
-    public void listar(){
-        System.out.println("Listando");
+    public List<Unsettled> listar(){
+        List<Unsettled> unsettled = repository.findAll();
+            System.out.println("WELCOME TO OUR WEB PAGE");
+        return unsettled;
+
+    }
+    @GetMapping("/testing")
+    public String testing(){
+        System.out.println("A api funciona");
+        return "This is my API, im so glad ur here";
     }
 
-    List<Unsettled> unsettledList = repository.findAll();
+
 }

@@ -1,13 +1,12 @@
 package com.Flyrank.project;
 import jakarta.persistence.*;
 
-@Table(name = "tb_model")
+@Table(name = "tb_modx'el")
 @Entity(name = "unsettled")
 public class Unsettled {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    @Column
     private String name;
 
     private String description;

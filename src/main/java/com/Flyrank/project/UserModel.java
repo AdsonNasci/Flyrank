@@ -21,5 +21,5 @@ public class UserModel {
     @Column(name = "age")
     private int age;
     @Column(name = "img_url")
-    private String  img_url;
+    private String img_url;
 }

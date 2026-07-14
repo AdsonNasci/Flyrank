@@ -13,14 +13,12 @@ public class UserController {
 
     @GetMapping("/all")
     public List<UserModel> all(){
-        List<UserModel> userModel = repository.findAll();
-        return userModel;
+        return repository.findAll();
 
     }
     @GetMapping("/FindId/{id}")
     public UserModel findId(@PathVariable Long id){
-        UserModel userModel = repository.findById(id).orElse(null);
-        return userModel;
+        return repository.findById(id).orElse(null);
     }
     @GetMapping("/testing")
     public String testing(){

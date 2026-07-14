@@ -6,21 +6,21 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/controller")
-public class ClientController {
+public class UserController {
 
-    private ClientRepository repository;
+    private UserRepository repository;
 
-    public ClientController(ClientRepository repository) {
+    public UserController(UserRepository repository) {
         this.repository = repository;
     }
 
     @GetMapping("/all")
-    public List<ClientModel> all(){
+    public List<UserModel> all(){
         return repository.findAll();
 
     }
     @GetMapping("/FindId/{id}")
-    public ClientModel findId(@PathVariable Long id){
+    public UserModel findId(@PathVariable Long id){
         return repository.findById(id).orElse(null);
     }
     @GetMapping("/testing")
@@ -28,21 +28,21 @@ public class ClientController {
         return "This is my API, im so glad ur here";
     }
     @PostMapping("/add")
-    public ClientModel addUser(ClientModel clientModel) {
+    public UserModel addUser(UserModel userModel) {
 
-        return repository.save(clientModel);
+        return repository.save(userModel);
     }
     @DeleteMapping("/delete/{id}")
     public void deleteUser(@PathVariable Long id) {
         repository.deleteById(id);
     }
     @PutMapping("/update/{id}")
-    public ClientModel updateUser(@PathVariable Long id, @RequestBody ClientModel clientModel) {
-        ClientModel existingUser = repository.findById(id).orElse(null);
+    public UserModel updateUser(@PathVariable Long id, @RequestBody UserModel userModel) {
+        UserModel existingUser = repository.findById(id).orElse(null);
         if (existingUser != null) {
-            existingUser.setName(clientModel.getName());
-            existingUser.setAge(clientModel.getAge());
-            existingUser.setImg_url(clientModel.getImg_url());
+            existingUser.setName(userModel.getName());
+            existingUser.setAge(userModel.getAge());
+            existingUser.setImg_url(userModel.getImg_url());
             return repository.save(existingUser);
         } else {
             return null;

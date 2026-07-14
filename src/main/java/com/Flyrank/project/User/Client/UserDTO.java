@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class ClientDTO {
+public class UserDTO {
         private Long id;
         private String name;
         private String img_url;

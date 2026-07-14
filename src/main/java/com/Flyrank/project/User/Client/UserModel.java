@@ -11,7 +11,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Data
 @ToString()
-public class ClientModel {
+public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")

@@ -1,4 +1,4 @@
-package com.Flyrank.project;
+package com.Flyrank.project.User.Client;
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class UserDTO {
+public class ClientDTO {
         private Long id;
         private String name;
         private String img_url;

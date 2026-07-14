@@ -1,4 +1,4 @@
-package com.Flyrank.project;
+package com.Flyrank.project.User.Client;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +11,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Data
 @ToString()
-public class UserModel {
+public class ClientModel {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")

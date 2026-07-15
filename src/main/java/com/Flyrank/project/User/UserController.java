@@ -1,4 +1,4 @@
-package com.Flyrank.project.User.Client;
+package com.Flyrank.project.User;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -42,7 +42,7 @@ public class UserController {
         if (existingUser != null) {
             existingUser.setName(userModel.getName());
             existingUser.setAge(userModel.getAge());
-            existingUser.setImg_url(userModel.getImg_url());
+            existingUser.setImgUrl(userModel.getImgUrl());
             return repository.save(existingUser);
         } else {
             return null;

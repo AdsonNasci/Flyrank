@@ -1,4 +1,4 @@
-package com.Flyrank.project.User.Client;
+package com.Flyrank.project.User;
 
 import lombok.Data;
 import org.springframework.stereotype.Service;

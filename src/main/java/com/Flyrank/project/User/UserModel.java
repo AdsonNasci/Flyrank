@@ -1,4 +1,4 @@
-package com.Flyrank.project.User.Client;
+package com.Flyrank.project.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +20,8 @@ public class UserModel {
     private String name;
     @Column(name = "age")
     private int age;
-    @Column(name = "img_url")
-    private String img_url;
+    @Column(name = "imgUrl")
+    private String imgUrl;
+    @Column(name ="userType")
+    private UserType userType;
 }

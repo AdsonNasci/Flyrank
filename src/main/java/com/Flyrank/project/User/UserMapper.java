@@ -1,4 +1,4 @@
-package com.Flyrank.project.User.Client;
+package com.Flyrank.project.User;
 
 import org.springframework.stereotype.Component;
 
@@ -9,7 +9,7 @@ public class UserMapper {
         UserModel userModel = new UserModel();
         userModel.setId(userDTO.getId());
         userModel.setName(userDTO.getName());
-        userModel.setImg_url(userDTO.getImg_url());
+        userModel.setImgUrl(userDTO.getImg_url());
         userModel.setAge(userDTO.getAge());
         return userModel;
     }
@@ -17,7 +17,7 @@ public class UserMapper {
         UserDTO userDTO = new UserDTO();
         userDTO.setId(userModel.getId());
         userDTO.setName(userModel.getName());
-        userDTO.setImg_url(userModel.getImg_url());
+        userDTO.setImg_url(userModel.getImgUrl());
         userDTO.setAge(userModel.getAge());
         return userDTO;
     }

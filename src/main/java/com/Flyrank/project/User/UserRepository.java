@@ -1,4 +1,4 @@
-package com.Flyrank.project.User.Client;
+package com.Flyrank.project.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

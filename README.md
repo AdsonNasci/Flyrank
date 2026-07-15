@@ -17,7 +17,7 @@ Lista de tecnologias utilizadas.
 
 ## 📦 How to Run
 Provide simple, copy-pasteable instructions for someone to get it running locally.
-1. Clone the repo: `git clone https://github.com/your-username/repo-name.git`
+1. Clone the repo: `git clone https://github.com/AdsonNasci/Flyrank`
 2. Configure your environment: Create a `.env` file based on `.env.example`.
 3. Build and run: `./mvnw spring-boot:run` (or your specific command).
 4. Banco de dados :I used postgres as a database, so you need to have it installed and running. You can use Docker to run a PostgreSQL container.
@@ -43,5 +43,5 @@ This project is actually  2 in 1 project, because i'm currently in a backend AI 
 
 ## 👤 Author
 **Adson Nascimento**
-* [GitHub](https://github.com/AdsonNasci
+* [GitHub](https://github.com/AdsonNasci)
 * [LinkedIn](https://linkedin.com/in/adsonchristopher/)

@@ -1,4 +1,4 @@
-package com.Flyrank.project.User;
+package com.Flyrank.project.Users;
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 public class UserDTO {
         private Long id;
         private String name;
-        private String img_url;
-        private int age;
-        private UserType userType;
+        private String imgUrl;
+        private String email;
+        private String password;
+        private UserRole userRole;
 }
 

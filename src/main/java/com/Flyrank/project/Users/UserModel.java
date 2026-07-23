@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.antlr.v4.runtime.misc.NotNull;
 import org.springframework.boot.autoconfigure.task.TaskExecutionProperties;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -19,10 +20,17 @@ import java.util.List;
 @Data
 @ToString()
 public class UserModel implements UserDetails {
+        public UserModel(String login, String password, UserRole userRole){
+            this.login = login;
+            this.password = password;
+            this.userRole = userRole;
+        }
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
     private Long id;
+    @Column(name = "login")
+    private String login;
     @Column(name = "name")
     private String name;
     @Column(name = "email")

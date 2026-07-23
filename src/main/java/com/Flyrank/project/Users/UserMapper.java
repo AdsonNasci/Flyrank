@@ -8,6 +8,7 @@ public class UserMapper {
     public static UserModel map(UserDTO userDTO){
         UserModel userModel = new UserModel();
         userModel.setId(userDTO.getId());
+        userModel.setLogin(userDTO.getLogin());
         userModel.setEmail(userDTO.getEmail());
         userModel.setName(userDTO.getName());
         userModel.setImgUrl(userDTO.getImgUrl());
@@ -18,6 +19,7 @@ public class UserMapper {
     public UserDTO map(UserModel userModel){
         UserDTO userDTO = new UserDTO();
         userDTO.setId(userModel.getId());
+        userDTO.setLogin(userModel.getLogin());
         userDTO.setName(userModel.getName());
         userDTO.setImgUrl(userModel.getImgUrl());
         userDTO.setPassword(userModel.getPassword());

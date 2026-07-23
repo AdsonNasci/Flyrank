@@ -1,5 +1,6 @@
-package com.Flyrank.project.Users;
+package Authentication;
 
+import com.Flyrank.project.Users.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

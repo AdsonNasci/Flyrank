@@ -1,16 +1,19 @@
 package com.Flyrank.project.Users;
 
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
 @Data
 public class UsersServices {
-
+    @Autowired
     private final PasswordEncoder encoder;
     private final UserRepository userRepository;
     private final UserMapper userMapper;
@@ -38,8 +41,18 @@ public class UsersServices {
         public void deleteClientbyId(Long id) {
             userRepository.deleteById(id);
         }
-        public UserDTO updateClient(Long id, UserDTO userDTO) {
 
+        public UserDTO updateClient(@PathVariable Long id, UserDTO userDTO) {
+            Optional<UserModel> userById = userRepository.findById(id);
+            if (userById.isPresent()) {
+                UserModel userToUpdate = userMapper.map(userDTO);
+                userToUpdate.setId(id);
+                userToUpdate.setPassword(encoder.encode(userToUpdate.getPassword()));
+                UserModel updatedUser = userRepository.save(userToUpdate);
+                return userMapper.map(updatedUser);
+            }else {
+                return null;
+            }
         }
 
 }
